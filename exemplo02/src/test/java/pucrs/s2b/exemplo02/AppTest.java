@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import junitparams.FileParameters;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 
@@ -17,6 +18,10 @@ public class AppTest {
 	public void testSomar(int val1, int val2, int res) throws Exception {
 		assertEquals(App.somar(val1, val2), res);
 	}//FIXME: Usuar sintaxe nova com assertThat()
+	
+	@Test
+    @FileParameters("src/test/resources/zxc.csv")
+    public void loadParamsFromCsv(int val1, int val2, int res) { }
 
 //	@Test
 //	public void testSomar2() {

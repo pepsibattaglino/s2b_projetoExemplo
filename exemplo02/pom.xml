@@ -28,4 +28,12 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <build>
+		<finalName>testandooooo</finalName>
+		<resources>
+			<resource>
+				<directory>src/test/resources</directory>
+			</resource>
+		</resources>
+	</build>
 </project>
