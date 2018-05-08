@@ -1,6 +1,8 @@
 package pucrs.s2b.exemplo02;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -16,12 +18,14 @@ public class AppTest {
 	@Parameters({"17, 30, 47", 
 				 "22, 90, 112" })
 	public void testSomar(int val1, int val2, int res) throws Exception {
-		assertEquals(App.somar(val1, val2), res);
-	}//FIXME: Usuar sintaxe nova com assertThat()
+		assertEquals(res, App.somar(val1, val2));
+	}
 	
 	@Test
     @FileParameters("src/test/resources/zxc.csv")
-    public void loadParamsFromCsv(int val1, int val2, int res) { }
+    public void loadParamsFromCsv(int val1, int val2, int res) { 
+		assertEquals(res, App.somar(val1, val2));
+	}
 
 //	@Test
 //	public void testSomar2() {
